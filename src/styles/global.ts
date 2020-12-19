@@ -16,7 +16,6 @@ export default createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
-    color: var(--title-color);
     font-family: 'Montserrat', sans-serif;
   }
 `;
