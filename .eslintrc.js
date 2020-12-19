@@ -17,13 +17,16 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['prettier', '@typescript-eslint'],
+  plugins: ['prettier', '@typescript-eslint', 'import'],
   settings: {
     'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
     'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+      },
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
@@ -39,6 +42,7 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': ['error'],
     'react/jsx-filename-extension': [2, { extensions: ['.ts', '.tsx'] }],
     'import/prefer-default-export': 'off',
+    'import/no-unresolved': 'error',
     'import/extensions': [
       'error',
       'ignorePackages',
