@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import colors from '../styles/colors';
 
 const Title = styled.h1`
-  color: red;
+  color: ${colors.pink};
   font-size: 50px;
 `;
 
