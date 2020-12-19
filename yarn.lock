@@ -4233,6 +4233,11 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-awesome-styled-grid@3.0.12:
+  version "3.0.12"
+  resolved "https://registry.yarnpkg.com/react-awesome-styled-grid/-/react-awesome-styled-grid-3.0.12.tgz#10cee2d4064798ccef27dafa7a90efa83d779119"
+  integrity sha512-pBsEKF6dm8DDWpwhrMlf5EqgXAVhIKOLfAAgU12FErhuzxCvycA9fCJOydk4Zi3bE20bL/NGAvjVFGijhZN5lQ==
+
 react-dom@^16.13.0:
   version "16.14.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.14.0.tgz#7ad838ec29a777fb3c75c3a190f661cf92ab8b89"

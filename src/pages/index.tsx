@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import Layout from '@components/Layout';
+
 import colors from '../styles/colors';
 
 const Title = styled.h1`
@@ -8,5 +10,9 @@ const Title = styled.h1`
 `;
 
 export default function Home() {
-  return <Title>My page</Title>;
+  return (
+    <Layout>
+      <Title>My page</Title>
+    </Layout>
+  );
 }
