@@ -15,11 +15,12 @@ const FeaturedSection: React.FC = () => {
           <Styled.SearchButton>find location</Styled.SearchButton>
         </Styled.SearchWrapper>
         <Styled.Content>
-          <Title style={{ marginBottom: 38 }}>FATHERS DAY SPECIAL</Title>
+          <Title>FATHERS DAY SPECIAL</Title>
           <Row>
             {[0, 1, 2, 3, 4].map((product, idx) => (
-              <Col key={product}>
+              <Col md={8 / 5} align="center" key={product}>
                 <ProductCard
+                  featured
                   name="Bolo de chocolate"
                   price={4.99}
                   oldPrice={6.99}

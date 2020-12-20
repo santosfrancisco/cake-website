@@ -5,6 +5,7 @@ import React from 'react';
 import * as Styled from './styles';
 
 interface IProductCard {
+  featured?: boolean;
   image?: string;
   rate?: Rate;
   name: string;
@@ -12,10 +13,10 @@ interface IProductCard {
   oldPrice?: number;
 }
 
-const ProductCard: React.FC<IProductCard> = ({ image, name, rate, price, oldPrice }) => {
+const ProductCard: React.FC<IProductCard> = ({ featured, image, name, rate, price, oldPrice }) => {
   return (
     <Styled.Container>
-      <Styled.FeaturedIcon />
+      {featured ? <Styled.FeaturedIcon /> : null}
       <Styled.CardImageWrapper imgSrc={image} />
       {rate !== undefined ? (
         <Styled.RatingWrapper>

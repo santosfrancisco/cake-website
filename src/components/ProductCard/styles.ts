@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 export const Container = styled.div`
   width: 196px;
   position: relative;
+  margin-top: 38px;
 `;
 
 export const CardImageWrapper = styled.div<{ imgSrc?: string }>`
