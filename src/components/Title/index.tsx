@@ -7,6 +7,7 @@ const Title = styled.h2<{ color?: string }>`
   font-size: 24px;
   color: ${({ color }) => color || colors.green};
   letter-spacing: 0px;
+  text-transform: uppercase;
 `;
 
 export default Title;

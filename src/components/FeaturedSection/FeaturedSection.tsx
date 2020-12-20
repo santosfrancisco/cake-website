@@ -1,8 +1,8 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import Title from '@components/Title';
 import ProductCard from '@components/ProductCard';
 import { Row, Col } from 'react-awesome-styled-grid';
-import { Rate } from '@components/StarsRating/StarsRating';
 
 import * as Styled from './styles';
 
@@ -17,17 +17,20 @@ const FeaturedSection: React.FC = () => {
         <Styled.Content>
           <Title>FATHERS DAY SPECIAL</Title>
           <Row>
-            {[0, 1, 2, 3, 4].map((product, idx) => (
-              <Col md={8 / 5} align="center" key={product}>
-                <ProductCard
-                  featured
-                  name="Bolo de chocolate"
-                  price={4.99}
-                  oldPrice={6.99}
-                  rate={idx as Rate}
-                />
-              </Col>
-            ))}
+            {Array(5)
+              .fill({
+                id: Math.floor(Math.random() * 100),
+                name: 'bolo de chocolate',
+                price: 4.99,
+                image: '/cake.jpg',
+                featured: true,
+                rate: 4,
+              })
+              .map(product => (
+                <Col md={8 / 5} align="center" key={product.id}>
+                  <ProductCard {...product} />
+                </Col>
+              ))}
           </Row>
         </Styled.Content>
       </Col>

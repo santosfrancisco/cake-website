@@ -9,7 +9,7 @@ interface IProductCard {
   image?: string;
   rate?: Rate;
   name: string;
-  price: number;
+  price?: number;
   oldPrice?: number;
 }
 
@@ -26,7 +26,7 @@ const ProductCard: React.FC<IProductCard> = ({ featured, image, name, rate, pric
       <Styled.ProductInfo>
         <Styled.ProductName>{name}</Styled.ProductName>
         {oldPrice ? <Styled.OldProductPrice>R$ {oldPrice}</Styled.OldProductPrice> : null}
-        <Styled.ProductPrice>R$ {price}</Styled.ProductPrice>
+        {price ? <Styled.ProductPrice>R$ {price}</Styled.ProductPrice> : null}
       </Styled.ProductInfo>
     </Styled.Container>
   );

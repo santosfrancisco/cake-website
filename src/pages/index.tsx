@@ -3,6 +3,7 @@ import Layout from '@components/Layout';
 import HeroCard from '@components/HeroCard';
 import FeaturedSection from '@components/FeaturedSection';
 import PopularSection from '@components/PopularSection';
+import TopBakerSection from '@components/TopBakerSection';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroCard />
       <FeaturedSection />
       <PopularSection />
+      <TopBakerSection />
     </Layout>
   );
 }
