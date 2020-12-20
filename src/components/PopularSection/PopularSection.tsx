@@ -18,7 +18,7 @@ const PopularSection: React.FC = () => {
             .fill({
               id: Math.floor(Math.random() * 100),
               name: 'bolo de chocolate',
-              price: 4.99,
+              price: 3.49,
               image: '/cake.jpg',
             })
             .map(product => (
