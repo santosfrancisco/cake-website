@@ -6,6 +6,7 @@ import PopularSection from '@components/PopularSection';
 import TopBakerSection from '@components/TopBakerSection';
 import RecentSection from '@components/RecentSection';
 import BytesSection from '@components/BytesSection';
+import Footer from '@components/Footer';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <TopBakerSection />
       <RecentSection />
       <BytesSection />
+      <Footer />
     </Layout>
   );
 }
