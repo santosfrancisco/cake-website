@@ -11,9 +11,7 @@ const TopBakerSection: React.FC = () => {
       <Container>
         <Row>
           <Col xs={4}>
-            <Title color={colors.purple} style={{ marginTop: 35 }}>
-              Top baker
-            </Title>
+            <Title color={colors.purple}>Top baker</Title>
           </Col>
           <Col>
             <Row>

@@ -6,15 +6,15 @@ import { Col, Row } from 'react-awesome-styled-grid';
 
 import * as Styled from './styles';
 
-const PopularSection: React.FC = () => {
+const RecentSection: React.FC = () => {
   return (
     <Styled.Section as="section">
       <Col xs={4}>
-        <Title color={colors.pink}>Popular</Title>
+        <Title color={colors.pink}>Recent</Title>
       </Col>
       <Col>
         <Row>
-          {Array(10)
+          {Array(5)
             .fill({
               id: Math.floor(Math.random() * 100),
               name: 'bolo de chocolate',
@@ -32,4 +32,4 @@ const PopularSection: React.FC = () => {
   );
 };
 
-export default PopularSection;
+export default RecentSection;

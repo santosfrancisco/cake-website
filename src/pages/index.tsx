@@ -4,6 +4,7 @@ import HeroCard from '@components/HeroCard';
 import FeaturedSection from '@components/FeaturedSection';
 import PopularSection from '@components/PopularSection';
 import TopBakerSection from '@components/TopBakerSection';
+import RecentSection from '@components/RecentSection';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <FeaturedSection />
       <PopularSection />
       <TopBakerSection />
+      <RecentSection />
     </Layout>
   );
 }
