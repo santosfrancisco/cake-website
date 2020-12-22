@@ -1,5 +1,4 @@
 import colors from '@styles/colors';
-import { Row } from 'react-awesome-styled-grid';
 import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
@@ -21,10 +20,13 @@ export const FooterContainer = styled.footer`
   }
 `;
 
-export const PrivacyWrapper = styled(Row)`
+export const PrivacyWrapper = styled.div`
   height: 46px;
-  width: 100vw;
   color: ${colors.pink};
   font-size: 12px;
   background-color: ${colors.text};
+
+  display: flex;
+  align-items: 'center';
+  /* justify-content: space-between; */
 `;

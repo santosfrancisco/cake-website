@@ -13,7 +13,7 @@ const StarsRating: React.FC<IStarsRating> = ({ rate, reviewers }) => {
   return (
     <Container>
       {[1, 2, 3, 4, 5].map(value => (
-        <StarIcon key={rate} src={value > rate ? '/svg/star.svg' : '/svg/filled-star.svg'} />
+        <StarIcon key={value} src={value > rate ? '/svg/star.svg' : '/svg/filled-star.svg'} />
       ))}
       {reviewers !== undefined ? (
         <span style={{ marginLeft: 16 }}>{`${reviewers} Review`}</span>

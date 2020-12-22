@@ -6,16 +6,16 @@ import NewsletterForm from '@components/NewsletterForm';
 import * as Styled from './styles';
 
 const LINKS_1 = [
-  { text: 'About', href: '#' },
-  { text: 'Blog', href: '#' },
-  { text: 'FAQ', href: '#' },
-  { text: 'Contact', href: '#' },
+  { text: 'About', href: '/#' },
+  { text: 'Blog', href: '/#' },
+  { text: 'FAQ', href: '/#' },
+  { text: 'Contact', href: '/#' },
 ];
 const LINKS_2 = [
-  { text: 'Shop', href: '#' },
-  { text: 'Mershandising', href: '#' },
-  { text: 'Delivery Information', href: '#' },
-  { text: 'Bakers Centre', href: '#' },
+  { text: 'Shop', href: '/#' },
+  { text: 'Mershandising', href: '/#' },
+  { text: 'Delivery Information', href: '/#' },
+  { text: 'Bakers Centre', href: '/#' },
 ];
 
 const Footer: React.FC = () => {
@@ -58,13 +58,15 @@ const Footer: React.FC = () => {
           </Col>
         </Row>
       </Container>
-      <Styled.PrivacyWrapper align="center" justify="space-between">
-        <Col align="center" sm={2}>
-          {`All Right Reserved Makerhub.my | ${new Date().getFullYear()}`}
-        </Col>
-        <Col align="center" sm={2}>
-          Term of Services • Privacy Policy
-        </Col>
+      <Styled.PrivacyWrapper>
+        <Row style={{ margin: 0 }} align="center" justify="space-between">
+          <Col xs={4} sm={2} align="center">
+            {`All Right Reserved Makerhub.my | ${new Date().getFullYear()}`}
+          </Col>
+          <Col xs={4} sm={2} align="center">
+            Term of Services • Privacy Policy
+          </Col>
+        </Row>
       </Styled.PrivacyWrapper>
     </Styled.FooterContainer>
   );

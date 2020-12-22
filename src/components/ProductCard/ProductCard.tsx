@@ -25,8 +25,22 @@ const ProductCard: React.FC<IProductCard> = ({ featured, image, name, rate, pric
       ) : null}
       <Styled.ProductInfo>
         <Styled.ProductName>{name}</Styled.ProductName>
-        {oldPrice ? <Styled.OldProductPrice>R$ {oldPrice}</Styled.OldProductPrice> : null}
-        {price ? <Styled.ProductPrice>R$ {price}</Styled.ProductPrice> : null}
+        {oldPrice ? (
+          <Styled.OldProductPrice>
+            {new Intl.NumberFormat('pt-BR', {
+              style: 'currency',
+              currency: 'BRL',
+            }).format(oldPrice)}
+          </Styled.OldProductPrice>
+        ) : null}
+        {price ? (
+          <Styled.ProductPrice>
+            {new Intl.NumberFormat('pt-BR', {
+              style: 'currency',
+              currency: 'BRL',
+            }).format(price)}
+          </Styled.ProductPrice>
+        ) : null}
       </Styled.ProductInfo>
     </Styled.Container>
   );

@@ -1,35 +1,52 @@
 import colors from '@styles/colors';
 import styled from 'styled-components';
+import { config } from 'react-awesome-styled-grid';
 
 export const Container = styled.div`
-  height: 512px;
   border-radius: 25px;
   margin-top: 60px;
+
+  ${props => config(props).media.sm`
+    height: 512px;
+  `}
 `;
 
 export const ImageWrapper = styled.div`
-  width: 40%;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  background-image: url('/cake.jpg');
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 
-  img {
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    height: 100%;
-    object-fit: cover;
-  }
+  ${props => config(props).media.sm`
+     border-top-left-radius: 25px;
+     border-bottom-left-radius: 25px;
+     border-top-right-radius: 0;
+  `}
 `;
 
 export const ContentWraper = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${colors.yellow};
-  width: 60%;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
   height: 100%;
+  padding: 16px;
 
-  padding-top: 80px;
-  padding-bottom: 64px;
-  padding-left: 89px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+
+  ${props => config(props).media.sm`
+    padding-top: 80px;
+    padding-bottom: 64px;
+    padding-left: 89px;
+
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 0;
+  `}
 `;
 
 export const Icon = styled.img`
@@ -63,8 +80,10 @@ export const Title = styled.h1`
 `;
 
 export const Description = styled.p`
-  font: normal normal 300 12px/20px Montserrat;
-  margin-top: 28px;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 300;
+  margin: 24px 0;
   max-width: 394px;
 `;
 

@@ -1,5 +1,5 @@
 import colors from '@styles/colors';
-import { Row } from 'react-awesome-styled-grid';
+import { config, Row } from 'react-awesome-styled-grid';
 import styled from 'styled-components';
 
 export const Section = styled(Row)`
@@ -10,7 +10,10 @@ export const Section = styled(Row)`
 
 export const Content = styled.div`
   background-color: ${colors.yellow};
-  padding: 42px 52px;
+  padding: 16px;
+  ${props => config(props).media.sm`
+    padding: 42px 52px;
+  `}
 `;
 
 export const SearchWrapper = styled.div`
@@ -18,7 +21,11 @@ export const SearchWrapper = styled.div`
   align-items: center;
   background-color: ${colors.white};
   height: 130px;
-  padding: 0 52px;
+  padding: 0 16px;
+
+  ${props => config(props).media.sm`
+   padding: 0 52px;
+  `}
 `;
 
 export const SearchInput = styled.input`
